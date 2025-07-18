@@ -1,0 +1,1 @@
+// core logic for the application and state management
