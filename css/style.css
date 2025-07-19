@@ -3,4 +3,85 @@
   --slytherin-green: #1a472a;
   --hufflepuff-yellow: #ecb939;
   --ravenclaw-blue: #222f5b;
+  --ravenclaw-blue-opaque-70: #222f5bb3;
+  --background: #1a1a2e;
+  --color-text: #e0e0e0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  font-variation-settings: 'wght' 400, 'opsz' 14;
+}
+
+body {
+  line-height: 1.5;
+  font-size: 1.125rem;
+  color: var(--color-text);
+  background-color: var(--background);
+  background-image: radial-gradient(circle at center,
+        transparent 9px,
+        var(--ravenclaw-blue-opaque-70) 9px,
+        var(--ravenclaw-blue-opaque-70) 10px,
+        transparent 10px
+      );
+    background-size: 22px 22px;
+}
+
+.h1 {
+  margin: 0 0 1rem;
+  font-family: 'Uncial Antiqua', cursive;
+  font-size: 3.75rem;
+  color: var(--hufflepuff-yellow);
+}
+
+.text {
+  margin: 0 0 1.2rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  font-variation-settings: 'wght' 600, 'opsz' 14;
+  text-decoration: none;
+  color: var(--color-text);
+  background-color: var(--gryffindor-red);
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.button--glowing {
+  font-size: 1.35rem;
+  background-image: linear-gradient(to right, var(--gryffindor-red), var(--hufflepuff-yellow));
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.5);
+  border-radius: 50px;
+}
+
+.button--glowing:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(255, 100, 0, 0.8);
+}
+
+.welcome {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10vh 20px 5vh;
+  text-align: center;
+}
+
+.welcome__title {
+  margin-bottom: 0;
+}
+
+.welcome__comment {
+  margin-bottom: 40px;
+}
+
+.dashboard {
+  display: none;
 }
