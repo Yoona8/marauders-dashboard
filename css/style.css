@@ -1,3 +1,6 @@
-h1 {
-  color: teal;
+:root {
+  --gryffindor-red: #740001;
+  --slytherin-green: #1a472a;
+  --hufflepuff-yellow: #ecb939;
+  --ravenclaw-blue: #222f5b;
 }

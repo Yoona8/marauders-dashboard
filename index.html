@@ -7,7 +7,38 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>Hello!</h1>
+  <!-- initial screen -->
+  <section class="welcome">
+    <h1 class="welcome__title h1">The Marauder's Dashboard</h1>
+    <p class="welcome__comment text">I solemnly swear that I am up to no good</p>
+    <a href="#" class="welcome__button button">Incendio!</a>
+  </section>
+
+  <!-- main dashboard (hidden initially) -->
+  <main class="dashboard">
+    <header class="header">
+      <h1 class="header__title h1">The Marauder's Dashboard</h1>
+      <p class="header__comment text">Mischief Managed</p>
+    </header>
+    <section class="controls">
+      <h2 class="h2">Controls</h2>
+    </section>
+    <div class="data-display data-display--characters">
+      <section class="charts"></section>
+      <section class="characters"></section>
+      <section class="spells"></section>
+    </div>
+    <div class="data-display data-display--spells">
+      <section class="spells"></section>
+    </div>
+  </main>
+
+  <!-- loader -->
+  <div class="loader"></div>
+
+  <!-- details modal -->
+  <dialog class="character-modal"></dialog>
+
   <script src="js/main.js" defer></script>
 </body>
 </html>
