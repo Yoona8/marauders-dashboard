@@ -4,10 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Marauders Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Uncial+Antiqua&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>Hello!</h1>
+  <!-- initial screen -->
+  <section class="welcome">
+    <h1 class="welcome__title h1">The Marauder's Dashboard</h1>
+    <p class="welcome__comment text">I solemnly swear that I am up to no good</p>
+    <!-- todo: add image of the map here (parchment map or something) -->
+    <a href="#" class="welcome__button button button--glowing">Incendio!</a>
+  </section>
+
+  <!-- main dashboard (hidden initially) -->
+  <main class="dashboard">
+    <header class="header">
+      <h1 class="header__title h1">The Marauder's Dashboard</h1>
+      <p class="header__comment text">Mischief Managed</p>
+    </header>
+    <section class="controls">
+      <h2 class="h2">Controls</h2>
+    </section>
+    <div class="data-display data-display--characters">
+      <section class="charts"></section>
+      <section class="characters"></section>
+      <section class="spells"></section>
+    </div>
+    <div class="data-display data-display--spells">
+      <section class="spells"></section>
+    </div>
+  </main>
+
+  <!-- loader -->
+  <div class="loader"></div>
+
+  <!-- details modal -->
+  <dialog class="character-modal"></dialog>
+
   <script src="js/main.js" defer></script>
 </body>
 </html>
