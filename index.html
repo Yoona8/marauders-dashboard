@@ -26,17 +26,65 @@
       <h1 class="header__title h1">The Marauder's Dashboard</h1>
       <p class="header__comment text">Mischief Managed</p>
     </header>
-    <section class="controls">
+    <section class="controls tile">
       <h2 class="h2">Controls</h2>
+      <p class="controls__label">Select View:</p>
+      <ul class="tabs">
+        <li class="tabs__item">
+          <button class="tabs__button button tabs__button--active" data-view="characters">Characters</button>
+        </li>
+        <li class="tabs__item">
+          <button class="tabs__button button" data-view="spells">Spells</button>
+        </li>
+      </ul>
+      <form class="form filters">
+        <p class="form__control">
+          <label class="controls__label" for="house">Filter by House:</label>
+          <select class="form__input form__input--select" id="house" name="house">
+            <option value="gryffindor">Gryffindor</option>
+            <option value="slytherin">Slytherin</option>
+            <option value="hufflepuff">Hufflepuff</option>
+            <option value="ravenclaw">Ravenclaw</option>
+          </select>
+        </p>
+        <p class="form__control">
+          <label class="controls__label" for="species">Filter by Species:</label>
+          <select class="form__input form__input--select" id="species" name="species">
+            <!-- todo: dynamically load options based on characters -->
+            <option value="human">Human</option>
+            <option value="elf">Elf</option>
+            <option value="goblin">Goblin</option>
+            <option value="werewolf">Werewolf</option>
+          </select>
+        </p>
+        <button class="form__button button" type="submit">Apply Filters</button>
+      </form>
+      <p class="controls__label">Sort by:</p>
+      <ul class="sort-options">
+        <li class="sort-options__item">
+          <button class="sort-options__button button" data-sort="name">Name</button>
+        </li>
+        <li class="sort-options__item">
+          <button class="sort-options__button button" data-sort="birth-year">Birth Year</button>
+        </li>
+      </ul>
     </section>
     <div class="data-display data-display--characters">
-      <section class="charts"></section>
-      <section class="characters"></section>
-      <section class="spells"></section>
+      <section class="charts">
+        <div class="tile">
+          <h2 class="h3">Character Distribution</h2>
+        </div>
+        <div class="tile">
+          <h2 class="h3">Top 5 Characters by Spells Cast</h2>
+        </div>
+      </section>
+      <section class="characters tile">
+        <h2 class="h2">Characters</h2>
+      </section>
     </div>
-    <div class="data-display data-display--spells">
-      <section class="spells"></section>
-    </div>
+    <!-- <div class="data-display data-display--spells">
+      <section class="spells tile"></section>
+    </div> -->
   </main>
 
   <!-- loader -->
