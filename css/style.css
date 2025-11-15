@@ -1,3 +1,321 @@
-h1 {
-  color: teal;
+:root {
+  --gryffindor-red: #740001;
+  --slytherin-green: #1a472a;
+  --hufflepuff-yellow: #ecb939;
+  --ravenclaw-blue: #222f5b;
+  --ravenclaw-blue-opaque-70: #222f5bb3;
+  --background: #1a1a2e;
+  --color-text: #e0e0e0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-variation-settings: 'opsz' 14;
+}
+
+body {
+  line-height: 1.5;
+  font-size: 1.125rem;
+  color: var(--color-text);
+  background-color: var(--background);
+  background-image: radial-gradient(circle at center,
+        transparent 9px,
+        var(--ravenclaw-blue-opaque-70) 9px,
+        var(--ravenclaw-blue-opaque-70) 10px,
+        transparent 10px
+      );
+    background-size: 22px 22px;
+}
+
+.h1,
+.h2,
+.h3 {
+  font-family: 'Uncial Antiqua', cursive;
+}
+
+.h1 {
+  margin: 0 0 1rem;
+  font-size: 3.75rem;
+  color: var(--hufflepuff-yellow);
+}
+
+.h2 {
+  position: relative;
+  margin: 0 0 1rem;
+}
+
+.h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: currentColor;
+  opacity: 0.5;
+}
+
+.h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.4rem;
+}
+
+.text {
+  margin: 0 0 1.2rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 8px 24px;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-variation-settings: 'wght' 600, 'opsz' 14;
+  text-decoration: none;
+  color: var(--color-text);
+  background-color: var(--gryffindor-red);
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.1s ease-in-out;
+}
+
+.button:not(:disabled):hover {
+  background-color: var(--hufflepuff-yellow);
+  color: var(--background);
+}
+
+.button:not(:disabled):focus {
+  outline: 2px solid var(--gryffindor-red);
+  outline-offset: 2px;
+}
+
+.button--glowing {
+  font-size: 1.35rem;
+  background-image: linear-gradient(to right, var(--gryffindor-red), var(--hufflepuff-yellow));
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.5);
+  border-radius: 50px;
+}
+
+.button--glowing:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(255, 100, 0, 0.8);
+}
+
+.welcome {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10vh 20px 5vh;
+  text-align: center;
+}
+
+.welcome__title {
+  margin-bottom: 0;
+}
+
+.welcome__comment {
+  margin-bottom: 40px;
+}
+
+.dashboard {
+  display: none;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-inline: 20px;
+}
+
+.header {
+  padding: 1rem;
+}
+
+.header__title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.tile {
+  padding: 1rem;
+  background-color: wheat;
+  color: #3a2d21;
+  border-radius: 10px;
+}
+
+.tile--bar-chart {
+  display: flex;
+  flex-direction: column;
+}
+
+.controls {
+  margin-bottom: 20px;
+}
+
+.controls__label {
+  display: block;
+  margin: 0 0 0.5rem;
+  font-weight: 600;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin: 0 0 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.form__control {
+  margin: 0 0 20px;
+}
+
+.form__input {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 40px;
+  padding: 0.5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.form__input:focus {
+  border-color: var(--gryffindor-red);
+}
+
+.filters {
+  margin-bottom: 20px;
+}
+
+.sort-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sort-options__button {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+}
+
+.charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: inherit;
+  text-decoration: none;
+  border-left: 4px solid var(--gryffindor-red);
+  border-radius: 8px;
+}
+
+.card--gryffindor {
+  border-left-color: var(--gryffindor-red);
+}
+
+.card--hufflepuff {
+  border-left-color: var(--hufflepuff-yellow);
+}
+
+.card--ravenclaw {
+  border-left-color: var(--ravenclaw-blue);
+}
+
+.card--slytherin {
+  border-left-color: var(--slytherin-green);
+}
+
+.card__title {
+  margin: 0 0 0.1rem;
+  font-size: 1.25rem;
+}
+
+.card__house {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.card__species {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.bar-chart {
+  flex-grow: 1;
+  display: grid;
+  gap: 5px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.bar-chart__item {
+  display: grid;
+  grid-template-columns: 100px auto;
+  align-items: center;
+  min-height: 100%;
+}
+
+.bar-chart__bar {
+  display: block;
+  width: 50%;
+  background-color: green;
+  min-height: 80%;
+}
+
+.pie {
+  display: grid;
+  grid-template-columns: 45% 1fr;
+  gap: 20px;
+}
+
+.pie__chart {
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--gryffindor-red) 0% 50%, 
+    var(--hufflepuff-yellow) 50% 75%, 
+    var(--ravenclaw-blue) 75% 90%,
+    var(--slytherin-green) 90% 100%
+  );
+}
+
+.pie__legend {
+  margin: auto 0;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+  list-style: none;
+}
+
+.pie__legend-color {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: var(--gryffindor-red);
 }
